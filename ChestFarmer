@@ -85,7 +85,6 @@ OnButton.MouseButton1Down:connect(function()
 			local args = {[1] = "silverchest"}
 			game:GetService("ReplicatedStorage").CloudFrameShared.DataStreams.OpenLootboxFunction:InvokeServer(unpack(args))
 
-		end
 	end
 end)
 
@@ -107,8 +106,6 @@ OffButton.MouseButton1Down:connect(function()
 		if getgenv().ChestFarmer == true then
 			local args = {[1] = "silverchest"}
 			game:GetService("ReplicatedStorage").CloudFrameShared.DataStreams.OpenLootboxFunction:InvokeServer(unpack(args))
-
-		end
 	end
 end)
 
