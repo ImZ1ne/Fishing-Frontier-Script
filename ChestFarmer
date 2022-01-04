@@ -78,7 +78,15 @@ OnButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 OnButton.TextSize = 50.000
 OnButton.TextWrapped = true
 OnButton.MouseButton1Down:connect(function()
-	loadstring(game:HttpGet(("https://pastebin.com/U1Vet8Sq"), true))()
+	getgenv().ChestFarmer = true;
+
+	while wait() do
+		if getgenv().ChestFarmer == true then
+			local args = {[1] = "silverchest"}
+			game:GetService("ReplicatedStorage").CloudFrameShared.DataStreams.OpenLootboxFunction:InvokeServer(unpack(args))
+
+		end
+	end
 end)
 
 OffButton.Name = "OffButton"
@@ -93,7 +101,15 @@ OffButton.Text = "Off"
 OffButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 OffButton.TextSize = 50.000
 OffButton.MouseButton1Down:connect(function()
-	loadstring(game:HttpGet(("https://pastebin.com/Yu6dvRig"), true))()
+	getgenv().ChestFarmer = false;
+
+	while wait() do
+		if getgenv().ChestFarmer == true then
+			local args = {[1] = "silverchest"}
+			game:GetService("ReplicatedStorage").CloudFrameShared.DataStreams.OpenLootboxFunction:InvokeServer(unpack(args))
+
+		end
+	end
 end)
 
 NOTE.Name = "NOTE"
